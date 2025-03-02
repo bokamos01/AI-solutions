@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule a Demo</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Schedule a Demo</h1>
+        <div class="promo-banner">
+		<div class="promo-button-container">
+        </div>
+ 
+            <h3>Join Our Events</h3>
+            <p>Stay updated with our latest AI innovations and industry events</p>
+		<button class="promo-button">View Upcoming Events</button>
+        </div>
+        <form id="demoForm">
+            <div class="form-group">
+                <label for="name">Full Name <span class="required">*</span></label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email Address <span class="required">*</span></label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+            
+            <div class="form-group">
+                <label for="company">Company Name <span class="required">*</span></label>
+                <input type="text" id="company" name="company" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="country">Country <span class="required">*</span></label>
+                <select id="country" name="country" required>
+                    <option value="">Select your country</option>
+                    <option value="US">United States</option>
+                    <option value="CA">Canada</option>
+                    <option value="UK">United Kingdom</option>
+                    <option value="AU">Australia</option>
+                    <option value="DE">Germany</option>
+                    <option value="FR">France</option>
+                    <option value="JP">Japan</option>
+                    <option value="IN">India</option>
+                    <option value="BR">Brazil</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="interests">What are you interested in? <span class="required">*</span></label>
+                <select id="interests" name="interests" required>
+                    <option value="">Select an option</option>
+                    <option value="virtual-assistant">AI-Powered Virtual Assistant</option>
+                    <option value="custom-solution">Personalized Solution Demo</option>
+                    <option value="both">Both</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="additional">Additional Information</label>
+                <textarea id="additional" name="additional" placeholder="Tell us more about your specific needs or questions..."></textarea>
+            </div>
+            
+            <button type="submit">Schedule My Demo</button>
+            
+            <div class="form-footer">
+                <p>By submitting this form, you agree to our privacy policy and terms of service.</p>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
