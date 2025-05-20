@@ -36,3 +36,4 @@ $content = ob_get_clean();
 // Include the master template
 include 'master.php';
 ?>
+
