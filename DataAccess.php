@@ -12,8 +12,8 @@ class DataAccess
             //connection parameters
             $server     = "127.0.0.1";
             $database   = "AIAssistant";
-            $username   = "darth_vader";
-            $password   = "verysecurepassword";
+            $username   = "root";
+            $password   = "@Galeasiama01234";
             $port       = "3306";
 
             //connectionstring

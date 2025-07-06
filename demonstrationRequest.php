@@ -57,6 +57,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $errors[] = "Interest selection is required";
     }
     
+    // Validate phone number - only allow numbers
+    if (!empty($phone) && !preg_match('/^[0-9]+$/', $phone)) {
+        $errors[] = "Phone number must contain only numbers";
+    }
+    
     // If there are validation errors, redirect back to the form
     if (!empty($errors)) {
         $_SESSION['demo_errors'] = $errors;

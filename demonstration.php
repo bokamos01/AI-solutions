@@ -1,4 +1,4 @@
-<?php
+<?php
 /**
  * Demonstration Request Page
  * Form for scheduling a product demonstration
@@ -92,9 +92,13 @@ ob_start();
             <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">
                 Phone Number
             </label>
-            <input type="tel" id="phone" name="phone" 
+            <input type="text" id="phone" name="phone" 
                    value="<?php echo htmlspecialchars($formData['phone'] ?? ''); ?>" 
-                   class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
+                   class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                   pattern="[0-9]*" 
+                   inputmode="numeric"
+                   title="Please enter numbers only"
+                   oninput="this.value = this.value.replace(/[^0-9]/g, '')">
         </div>
         
         <div class="mt-4">

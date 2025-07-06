@@ -158,9 +158,13 @@ ob_start();
                 <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">
                     Phone Number
                 </label>
-                <input type="tel" id="phone" name="phone" 
+                <input type="text" id="phone" name="phone" 
                     value="<?php echo htmlspecialchars($formData['phone'] ?? ''); ?>" 
-                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                    pattern="[0-9]*" 
+                    inputmode="numeric"
+                    title="Please enter numbers only"
+                    oninput="this.value = this.value.replace(/[^0-9]/g, '')">
             </div>
             
             <div>
@@ -201,6 +205,30 @@ ob_start();
         </form>
     </div>
 </div>
+
+<script>
+function registerForEvent(eventId, eventTitle) {
+    document.getElementById('event').value = eventId;
+    document.getElementById('event_title').value = eventTitle;
+    
+    // Show the registration form
+    document.getElementById('registrationFormContainer').classList.remove('hidden');
+    
+    // Update the form title
+    const formTitle = document.querySelector('#registrationFormContainer h2');
+    formTitle.textContent = 'Register for ' + eventTitle;
+    
+    // Scroll to the form
+    document.getElementById('registrationFormContainer').scrollIntoView({
+        behavior: 'smooth'
+    });
+}
+
+document.getElementById('cancelRegistration').addEventListener('click', function() {
+    document.getElementById('registrationFormContainer').classList.add('hidden');
+    document.getElementById('eventRegistrationForm').reset();
+});
+</script>
 
 <?php
 // Get the content from the buffer
